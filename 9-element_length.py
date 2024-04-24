@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """
 element_length - takes a list element as argument and returns the length of the element
 """

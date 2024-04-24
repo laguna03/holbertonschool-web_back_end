@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """
 Module to convert a float to a string in type-annotated fashion.
 """

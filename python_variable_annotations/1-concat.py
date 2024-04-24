@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """
 Module to concatenate two strings in type-annotated fashion.
 """
