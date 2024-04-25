@@ -1,16 +1,8 @@
 #!/usr/bin/env python3
-"""
-to_kv - takes a string k and an int OR float v as arguments and returns a tuple
-"""
-
-from typing import Union, Tuple
+"""This module defines a function with type annotations."""
+from typing import Tuple, Union
 
 
 def to_kv(k: str, v: Union[int, float]) -> Tuple[str, float]:
-    """
-    to_kv - takes a string k and an int OR float v as arguments and returns a tuple
-    k: string
-    v: int or float
-    returns: tuple containing k and the square of v
-    """
-    return (k, v**2)
+    """Takes a string k and an int OR float v and returns a tuple."""
+    return (k, v * v)
