@@ -1,14 +1,18 @@
 #!/usr/bin/env python3
-""" Async Comprehensions """
+"""
+Measure runtime
+"""
 
-from asyncio import sleep
-from random import uniform
-from typing import List
+from asyncio import gather
+from time import time
 
-async_generator = __import__("0-async_generator").async_generator
+async_comprehension = __import__("1-async_comprehension").async_comprehension
 
 
-async def async_comprehension() -> List[float]:
-    """Async Comprehensions"""
-    a = [i async for i in async_generator()]
-    return a
+async def measure_runtime() -> float:
+    """Measure runtime"""
+    start = time()
+    tasks = [async_comprehension() for _ in range(4)]
+    await gather(*tasks)
+    end = time()
+    return end - start
