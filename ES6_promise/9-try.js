@@ -1,7 +1,15 @@
-export default function divideFunction(numerator, denominator) {
-    if (denominator === 0) {
-      throw Error('cannot divide by 0');
+export default function guardrail(mathFunction) {
+    const queue = [];
+    let value;
+
+    try {
+      value = mathFunction();
+    } catch (err) {
+      value = err.toString();
     }
 
-    return numerator / denominator;
+    queue.push(value);
+    queue.push('Guardrail was processed');
+
+    return queue;
   }
