@@ -1,9 +1,11 @@
-function getStudentsByLocation(students, city) {
-    if (!Array.isArray(students)) {
-      return [];
-    }
-
-    return students.filter((item) => item.location === city);
+function getListStudentIds(students) {
+  if (!Array.isArray(students)) {
+    return [];
   }
 
-  export default getStudentsByLocation;
+  const ids = students.map((item) => item.id);
+
+  return ids;
+}
+
+export default getListStudentIds;
