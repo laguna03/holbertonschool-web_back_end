@@ -1,11 +1,13 @@
-const cleanSet = (set, string) => {
-  if (!string || !string.length) return '';
-  let value = '';
-  for (const el of set) {
-    if (el && el.startsWith(string)) {
-      value += value.length === 0 ? el.replace(string, '') : el.replace(string, '-');
-    }
+function updateUniqueItems(map) {
+  if (!(map instanceof Map)) {
+    throw Error('Cannot process');
   }
-  return value;
-};
-export default cleanSet;
+
+  for (const [key] of map) {
+    if (map.get(key) === 1) map.set(key, 100);
+  }
+
+  return map;
+}
+
+export default updateUniqueItems;
